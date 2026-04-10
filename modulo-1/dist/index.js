@@ -1,0 +1,12 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const math_utils_1 = require("./math-utils");
+const numeros = [10, 20, 30, 40, 100];
+const limite = 20;
+const media = (0, math_utils_1.calcularMedia)(numeros);
+const mediana = (0, math_utils_1.calcularMediana)(numeros);
+const atipicos = (0, math_utils_1.filtrarAtipicos)(numeros, limite);
+console.log("Array original:", numeros);
+console.log("Media:", media);
+console.log("Mediana:", mediana);
+console.log("Atípicos:", atipicos);
