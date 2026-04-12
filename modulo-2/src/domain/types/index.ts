@@ -49,5 +49,12 @@ function generarReporte (estado: EstadoMatricula): string {
     case "FINALIZADA": 
         return "La nota media del alumno es: " + estado.notaMedia; 
     
+    // COMPROBACION NUEVOS "SWITCHS" (never fuerza un error de compilacion)
+
+    default: 
+    const comprobacionExhaustiva: never = estado; 
+    throw new Error(`Estado no manejado: ${comprobacionExhaustiva}`)
+    
+    
     }
 }
